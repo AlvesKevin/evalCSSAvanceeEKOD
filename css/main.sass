@@ -1,0 +1,347 @@
+$couleur-principale: rgb(46,177,196)
+$blanc: white
+
+html body
+  margin: 0
+  padding: 0
+  background-color: black
+  font-family: 'Open Sans', sans-serif
+
+nav
+  display: flex
+  padding-left: 50px
+  padding-right: 50px
+  justify-content: space-between
+  align-items: center
+
+#burger-menu
+  display: flex
+  flex-direction: column
+  text-decoration: none
+  list-style: none
+
+  li
+    list-style: none
+    margin: 5px 0
+    width: 30px
+    height: 3px
+    background-color: #282828
+    transition: all 0.3s ease-in-out
+
+#page1
+  width: 100%
+  height: 92vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  background-image: url("/img/keyboard.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom
+  color: $blanc
+
+#container-carousel
+  width:  90%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 200px
+  text-align: center
+  font-weight: 300
+  font-size: 25px
+
+  img:nth-child(3)
+    rotate: 180deg
+
+#container-learn-more
+  text-align: center
+  font-size: 13px
+  font-weight: 300
+
+  img
+    width: 40px
+    height: 40px
+
+#page2
+  width: 100%
+  background-color: $blanc
+  text-align: center
+
+  h2
+    text-align: center
+    font-size: 30px
+    margin: 0
+    padding-top: 30px
+
+  #titre
+    color: $couleur-principale
+
+  #container-icon-page2
+    padding-left: 50px
+    padding-right: 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    margin-top: 50px
+    text-align: left
+
+    .container-icon-texte-page2
+      display: flex
+      width: 400px
+
+      img
+        width: 64px
+        height: 64px
+        margin: 20px
+
+#background-learn-more-page2
+  background-image: url("/img/laptop.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 500px
+  margin-top: 50px
+  color: $blanc !important
+
+  .background-blue
+    width: 100%
+    height: 100%
+    background-color: rgba(46, 177, 196, 0.4)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    #button
+      width: 190px
+      height: 60px
+      border: 1px solid white
+      border-radius: 100px
+      font-size: 25px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 20px
+      cursor: pointer
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
+
+      &:hover
+        background-color: $blanc
+        color: rgb(19, 19, 19)
+
+#container-about-page2
+  display: flex
+  justify-content: space-between
+  align-items: center
+  text-align: left
+
+  $breakpoints: 1322px
+
+  @media (max-width: $breakpoints)
+    flex-direction: column
+
+  img
+    width: 500px
+    height: 400px
+    @media (max-width: $breakpoints)
+      width: 100vw
+      height: 100%
+
+  #container-texte-image-about
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoints)
+      flex-direction: column
+
+  h2
+    padding: 100px
+    text-align: left
+    @media (max-width: $breakpoints)
+      padding: 20px
+      text-align: center
+
+  p
+    width: 400px
+    margin-right: 100px
+    @media (max-width: $breakpoints)
+      width: 80%
+      margin: 40px auto
+
+#page3
+  width: 100%
+  height: 600px
+  display: flex
+  align-items: center
+  background-image: url("/img/offices.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  color: $blanc
+  text-align: center
+
+  .background-blue
+    width: 100%
+    height: 100%
+    background-color: rgba(46, 177, 196, 0.4)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  h2
+    font-size: 40px
+    padding-bottom: 20px
+
+  p
+    font-size: 25px
+
+  #zone-mail
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 50px
+    border: 1px solid white
+    height: 60px
+    border-radius: 100px
+
+    img
+      rotate: 180deg
+      width: 40px
+      height: 40px
+
+    input[type="text"]
+      border: none
+      background-color: transparent
+      outline: none
+      color: $blanc
+
+      &::placeholder
+        color: #ffffff
+
+#container-contact
+  display: flex
+  background-color: rgb(242,247,248)
+  align-items: center
+  justify-content: space-around
+  text-align: center
+
+  h2
+    font-size: 30px
+
+  #container-form2
+    display: flex
+    flex-direction: column
+
+    $breakpoints: 1322px
+
+    @media (max-width: $breakpoints)
+      width: 100%
+
+  form
+    width: 50%
+    margin: 0 auto
+
+  #container-form
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    $breakpoints: 1322px
+
+    @media (max-width: $breakpoints)
+      flex-direction: column
+      width: 100%
+
+    input[type="text"]
+      width: 500px
+      height: 40px
+      border-radius: 100px
+      border: none
+      outline: none
+      padding-left: 10px
+      background-color: $blanc
+      margin-bottom: 20px
+
+      @media (max-width: $breakpoints)
+        width: 100%
+        padding-left: 0
+
+    input[type="number"]
+      width: 500px
+      height: 40px
+      border-radius: 100px
+      border: none
+      outline: none
+      padding-left: 10px
+      background-color: $blanc
+
+      @media (max-width: $breakpoints)
+        width: 100%
+        padding-left: 0
+
+    textarea
+      width: 500px
+      border-radius: 10px
+      border: none
+      outline: none
+      padding-left: 10px
+      background-color: $blanc
+      margin-left: 40px
+
+      @media (max-width: $breakpoints)
+        width: 100%
+        padding-left: 0
+        margin-left: 0
+        margin-top: 20px
+
+  #button-form
+    width: 190px
+    height: 60px
+    background-color: $couleur-principale
+    color: $blanc
+    border-radius: 100px
+    font-size: 25px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
+
+    &:hover
+      background-color: $blanc
+      color: rgb(19, 19, 19)
+
+    &:active
+      transform: scale(0.95)
+
+    margin: 50px auto
+
+footer
+  width: 100%
+  height: 200px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  color: $blanc
+
+  $breakpoints : 1322px
+
+  @media (max-width: $breakpoints)
+    flex-direction: column-reverse
+    height: unset
+    align-items: baseline
+
+  #reseau img
+    width: 30px
+    height: 30px
+    margin-right: 10px
+
+  p
+    width: 650px
+
+    @media (max-width: $breakpoints)
+      width: 90%
+      margin: 50px auto
+
